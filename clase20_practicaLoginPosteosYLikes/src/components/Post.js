@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { db } from '../firebase/config';
+import firebase from 'firebase';
 
 class Post extends Component{
     constructor(props){
@@ -15,7 +16,7 @@ class Post extends Component{
         //Agregar mi usuario a un array de usuario que likearon.
             //Updatear el registro (documento)
         db.collection('posts').doc(this.props.postData.id).update({
-            likes: "//acá tenemos que pasar la info a actualizar"
+            likes: firebase.firestore.FieldValue.arrayUnion('demo demo')
         })
 
         //Cambiar estado
@@ -28,7 +29,7 @@ class Post extends Component{
              <Text>Texto del post: {this.props.postData.data.texto}</Text>
              <Text>user: {this.props.postData.data.owner} </Text>  
 
-             <TouchableOpacity>
+             <TouchableOpacity onPress={()=>this.darLike()}>
                  <Text>Me gusta</Text>
              </TouchableOpacity>          
             </View>
