@@ -15,7 +15,6 @@ class Home extends Component{
     console.log('En didMount de Home');
     db.collection('posts').onSnapshot(
       docs => {
-        console.log(docs);
         //Array para crear datos en formato más útil.
         let posts = [];
         docs.forEach( doc => {
@@ -24,7 +23,6 @@ class Home extends Component{
             data: doc.data(),
           })
         })
-        console.log(posts);
 
         this.setState({
           posteos: posts,

@@ -9,7 +9,6 @@ class Profile extends Component{
     }
   }
   render(){
-    console.log(this.props.userData);
     return(
       <View style={styles.container}>
           <Text style={styles.welcome}> Bienvenido: {this.props.userData.email}</Text>

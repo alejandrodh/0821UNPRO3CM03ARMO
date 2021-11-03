@@ -84,7 +84,6 @@ class Post extends Component{
     }
 
     render(){
-        console.log(this.props);
         return(
             <View style={styles.contanier}>
              <Text>Texto del post: {this.props.postData.data.texto}</Text>

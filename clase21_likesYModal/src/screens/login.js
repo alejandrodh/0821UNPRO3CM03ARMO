@@ -12,7 +12,6 @@ class Login extends Component{
     }
 
     render(){
-        console.log(this.props.login);
         return(
             <View style={styles.formContainer}>
                 <Text>Login</Text>
