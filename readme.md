@@ -1,3 +1,4 @@
+## Leer porfa...
 En cada clase tendremos la versión de la app en react en donde aplicamos los temas del día.  
 La carpeta con la aplicación se llama `my-app`.  
 Por cuestiones de espacio el proyecto no contendrá la carpeta `node_modules`.  
